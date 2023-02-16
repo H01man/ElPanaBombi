@@ -1,0 +1,13 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.encabezado{
+    background: #32B66E;
+}
+
+.footer{
+    background-color: #32B66E;
+}

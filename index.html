@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Boostrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!--Estilo CSS-->
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+
+    <title>Inicio</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg caja-encabezado d-flex align-items-center sticky-lg-top sticky-md-top">
+        <div class="container-fluid">
+            <nav class="logo col-sm-2">
+                <img class="img-logo w-25" src="img/My project.png" alt="Logo">
+            </nav>
+    
+            <button class="navbar-toggler mx-3 bg-success border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <nav class="me-auto w-25 d-lg-flex">
+                    <div class="nav-item col d-flex justify-content-center text-md-center">
+                        <a class="nav-link" href="#somos">¿Quienes somos?</a>
+                    </div>
+
+                    <div class="nav-item col d-flex justify-content-center align-items-center">
+                        <a class="nav-link" href="#lonuestro">Lo nuestro</a>
+                    </div>
+
+                    <div class="nav-item col d-flex justify-content-center align-items-center">
+                        <a class="nav-link" href="#productos">Productos</a>
+                    </div>
+                </nav>
+    
+                <nav class="botones d-flex col-lg-4 ms-auto justify-content-sm-end">
+                    <div class="boton col-xl-5 col-lg-5 d-flex justify-content-lg-end mx-lg-3 mx-sm-3">
+                        <button type="button" class="btn btn-success border-0 active nav-item" id="iniciosesion" data-bs-toggle="modal" data-bs-target="#Modal">
+                            Iniciar sesion
+                        </button>
+                    </div>
+    
+                    <div class="boton col-xl-5 col-lg-7">
+                        <a class="btn btn-success active" href="registro.html">
+                            Registrarse
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+    </nav>
+
+    <!--Modal inicio sesion-->
+    <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalLabel">Log in</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="productos.html" class="form" id="form">
+                        <div class="my-2">
+                            <label for="nombre_usuario">
+                                Nombre usuario: 
+                            </label>
+                            <input class="form-control" placeholder="Ej:Marco" type="text" name="nombre_usuario" id="nombre">
+                        </div>
+
+                        <div mb-2>
+                            <label for="password">
+                                Contraseña: 
+                            </label>
+                            <input class="form-control" placeholder="Ej:Perez" type="password" name="password" id="password">
+                        </div>
+                        <div class="mt-3">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-success" onclick="enviar()">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Carrusel-->
+    <div id="carrusel" class="carousel slide container-lg container-md container-sm my-5" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carrusel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="slide 1"></button>
+            <button type="button" data-bs-target="#carrusel" data-bs-slide-to="1" aria-current="true" aria-label="slide 2"></button>
+            <button type="button" data-bs-target="#carrusel" data-bs-slide-to="2" aria-current="true" aria-label="slide 3"></button>
+            <button type="button" data-bs-target="#carrusel" data-bs-slide-to="3" aria-current="true" aria-label="slide 4"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="img/img1.jpg" alt="">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="img/img2.jpg"  alt="">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="img/img2.jpg" alt="">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="img/img1.jpg" alt="">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!--Quienes somos-->
+    <div class="" id="somos">
+        <div class="container-sm container-md container-lg text-center">
+            <h1>
+                ¿Quienes somos?
+            </h1>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <hr class="w-25">
+        </div>
+
+        <div class="container w-50 text-center mb-5 col-md-12 col-sm-12">
+            <p>
+                Somos una cadena de supermercados ubicados a nivel nacional, nos encargamos de vender productos de la canasta familiar con la mejor calidad dentro del mercado. <br><br>
+                Buscamos tener productos de calidad al mejor precio buscando preservar el biernestar de su bolsillo y no afectar su estabilidad economica, para nostros es muy importante su opinion y su tranquilidad
+
+            </p>
+        </div>
+    </div>
+
+    <!--Cartas  informacion-->
+    <div class="container-lg d-flex flex-sm-column flex-lg-row flex-md-row flex-wrap justify-content-lg-evenly justify-content-md-evenly align-items-sm-center mb-5" id="lonuestro">
+        <!--1-->
+        <div class="tarjetas-info card p-3 w-25 mx-2 my-3 border-start-0 border-end-0 border-top-0 border-3 border-bottom border-success">
+            <img class="container w-50" src="img/mejor.png" width="40%" alt="">
+            
+            <div class="d-flex justify-content-center">
+                <hr class="w-50">
+            </div>
+
+            <div class="card-body text-center">
+                Tenemos productos con la mejor calidad que podras encontrar
+            </div>
+        </div>
+
+        <!--2-->
+        <div class="tarjetas-info card p-3 w-25 mx-2 my-3 border-start-0 border-end-0 border-top-0 border-3 border-bottom border-success">
+            <img class="container w-50" src="img/dolar.png" width="40%" alt="">
+
+            <div class="d-flex justify-content-center">
+                <hr class="w-50">
+            </div>
+
+            <div class="card-body text-center">
+                Nos importa tu economia y el bienestar de tu bolsillo
+            </div>
+        </div>
+    </div>
+
+    <!--Productos-->
+    <div>
+        <div class="container text-center">
+            <h1>
+                Productos
+            </h1>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <hr class="w-25">
+        </div>
+
+        <div class="container mb-5" id="productos">
+            <div class="d-flex flex-sm-column flex-lg-row justify-content-md-center align-items-sm-center">
+                <div class="card col mx-md-3 mt-sm-3 mb-sm-4 mt-lg-2 border-0 border-bottom border-3 border-success shadow">
+
+                    <!--P 1-->
+                    <div class="d-flex justify-content-center mt-2">
+                        <img src="img/carne.png" alt="">
+                    </div>
+
+                    <div class="card-body">
+                        <p class="text-success fw-bold text-center">
+                            Ofrecemos productos carnicos de la mas alta calidad, disfuta de carne suave y fresca para disfrutar junto a tu famiulia sin preocupaciones
+                        </p>
+                    </div>
+
+                </div>
+    
+                <!--P 2-->
+                <div class="card col mx-md-3 mb-sm-4 mt-lg-2 border-0 border-bottom border-3 border-success shadow">
+                    
+                    <div class="d-flex justify-content-center mt-2">
+                        <img src="img/frutas_verduras.png" alt="">
+                    </div>
+
+                    <div class="card-body">
+                        <p class="text-center text-success fw-bold">
+                            En Frutiver manejamos frutas y verduras frescas, traidas especialmente del campo colombiano 
+                        </p>
+                    </div>
+
+                </div>
+
+                <!--P 3-->
+                <div class="card col mx-md-3 mb-sm-4 mt-lg-2 border-0 border-bottom border-3 border-success shadow">
+                    
+                    <div class="d-flex justify-content-center mt-2">
+                        <img src="img/botella-de-leche.png" alt="">
+                    </div>
+
+                    <div class="card-body">
+                        <p class="text-success text-center fw-bold">
+                            Disfrutaras de la mas alta calidad en productos lacteos como yogurt's, Leche, quesos,etc.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <div class="footer d-flex flex-lg-row flex-md-column flex-sm-column py-4">
+        <!--Iz-footer-->
+        <div class="col text-center d-flex flex-column justify-content-center">
+            <h1 class="t_footer text-success">
+                Frutiver
+            </h1>
+            <h5 class="fw-bolder">
+                Tenemos lo que necesitas
+            </h5>
+        </div>
+
+        <!--D-footer-->
+        <div class="col text-center d-flex flex-column justify-content-center">
+            <div class="">
+                <label for="direccion">
+                    Direccion:
+                </label>
+                <p name="direccion">
+                    Cra 11 #59-80
+                </p>
+            </div>
+
+            <div>
+                <label for="telefono">
+                    Telefono:
+                </label>
+                <p name="telefono">
+                    3001809856
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--Js-->   
+    <script src="Js/forms.js"></script>
+
+    <!--Boostrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+</body>
+</html>

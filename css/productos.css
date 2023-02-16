@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.encabezado{
+    background: #32B66E;
+}
+
+.carn:hover{
+    color: #184b00;
+    border-bottom: 3px solid rgb(25, 71, 25);
+}
+
+.lac:hover{
+    border-bottom: 3px solid rgb(25, 71, 25);
+}
+
+.frt:hover{
+    border-bottom: 3px solid rgb(25, 71, 25);
+}
+
+.ver:hover{
+    border-bottom: 3px solid rgb(25, 71, 25);
+}
+
+.leg:hover{
+    border-bottom: 3px solid rgb(25, 71, 25);
+}
+
+.img{
+    width: 100%;
+}
+
+.rejilla{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.footer{
+    background-color: #32B66E;
+}
+
+.t_footer{
+    font-size: 88px;
+}
+
+.carrito{
+    float: right;
+}

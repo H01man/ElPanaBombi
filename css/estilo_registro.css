@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.encabezado,.footer{
+    background: #32B66E;
+}
+
+.logo{
+    margin-left: 4%;
+}
+
+.inicio{
+    margin-right: 10%;
+}
+
+.tit{
+    font-size: 40px;
+}
+
+.logo{
+    text-decoration: none;
+    color: black;
+    width: 10%;
+}
